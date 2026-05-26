@@ -44,6 +44,8 @@ myLoad <- champ.load(
 
 myNorm <- champ.norm(beta = myLoad$beta, plotBMIQ = FALSE, cores = 10 , arraytype = "EPIC")
 
+myNorm <- 1 - myNorm
+
 write.csv(myNorm, file = str_c(path, "/csv/", "all_beta_normalized.csv"), quote = F, row.names = T)
 
 # 我們用變異數過濾(Variance Filtering)，刪除明顯不顯著的CpG，藉此降低懲罰係數
