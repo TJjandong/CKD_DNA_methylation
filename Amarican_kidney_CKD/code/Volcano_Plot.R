@@ -45,7 +45,7 @@ ggplot(merged_data, aes(x = Delta_Beta, y = -log10(N_to_C.adj.P.Val), color = Si
   geom_vline(xintercept = c(-0.2, 0.2), linetype = "dashed", color = "black") +
   theme_minimal() +
   labs(
-    title = "Volcano Plot of CKD Methylation",
+    title = "Volcano Plot of US CKD Methylation",
     x = "Delta Beta",
     y = "-log10(Adjusted P-Value)"
   ) +
