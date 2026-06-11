@@ -30,7 +30,7 @@ class PCA_analysis:
     def filt_significant_CpGs(self):                        #把非常顯著的位點標記出來
         self.significant_CpGs = self.dmp_data[
                                             (self.dmp_data['N_to_C.adj.P.Val'] < 0.05) &
-                                            (abs(self.delta_beta_mean_values['Delta_Beta_Mean']) > 0.2)
+                                            (abs(self.delta_beta_mean_values['Delta_Beta_Mean']) > 0.05)
                                             ].index.tolist()
         
         print(f"篩選出了 {len(self.significant_CpGs)} 個顯著 CpG！")

@@ -39,7 +39,7 @@ myLoad <- champ.load(
   filterMultiHit = TRUE,    # 剔除會發生非特異性結合 (Cross-reactive) 的探針
   filterXY = TRUE,          # 剔除 X, Y 染色體上的探針 (避免性別差異造成的偏差)
   
-  force = TRUE              #因為有些idat檔案大小差2KB，minifi安全性報錯，需強制執行
+  force = TRUE              # 因為有些idat檔案大小差2KB，minifi安全性報錯，需強制執行
 )
 
 myNorm <- champ.norm(beta = myLoad$beta, plotBMIQ = FALSE, cores = 10 , arraytype = "EPIC")
